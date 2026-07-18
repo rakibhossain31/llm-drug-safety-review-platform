@@ -275,13 +275,10 @@ Selected output fields:
 
 See [`docs/SYSTEM_CARD.md`](docs/SYSTEM_CARD.md).
 
-## 14. Fellowship relevance
-
-This project demonstrates the central engineering and governance questions involved in applying LLMs to drug safety reviews: unstructured-to-structured transformation, source-grounded RAG, terminology assistance, confidence and uncertainty, human-in-the-loop decisions, auditability, synthetic-data prototyping, local fallbacks, testing, monitoring, and explicit safety boundaries. It provides a practical artifact for discussing both technical capability and responsible deployment.
 
 See [`docs/FELLOWSHIP_PROJECT_BRIEF.md`](docs/FELLOWSHIP_PROJECT_BRIEF.md) and [`docs/RESUME_AND_INTERVIEW_GUIDE.md`](docs/RESUME_AND_INTERVIEW_GUIDE.md).
 
-## 15. Future improvements
+## 14. Future improvements
 
 - Replace TF-IDF with validated biomedical embeddings and a governed vector store
 - Add negation, temporality, medication history, and multi-product relationship extraction
