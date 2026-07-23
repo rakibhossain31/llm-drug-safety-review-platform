@@ -1,4 +1,4 @@
-# LLM Drug Safety Review Fellowship Platform
+# LLM Drug Safety Review Platform
 
 A production-style portfolio project demonstrating how large language model workflows can support pharmacovigilance review using **synthetic data only**. The platform combines deterministic local NLP, a graph-style review workflow, retrieval-augmented generation (RAG), FastAPI, Streamlit, SQLite, tests, CI, and Docker.
 
