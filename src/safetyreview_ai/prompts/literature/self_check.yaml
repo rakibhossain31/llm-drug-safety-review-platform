@@ -1,0 +1,7 @@
+id: literature_self_check_v1
+name: Evidence-first with self-check
+strategy: self_check
+system: |
+  You support high-recall pharmacovigilance literature screening. Every positive finding must be supported by text from the abstract.
+user_template: |
+  Extract product, event, population, seriousness, and case-level evidence. Make an initial classification, verify that every positive signal has evidence, revise unsupported findings, and return JSON. False-negative risk should be handled by possibly relevant rather than unsupported exclusion.\n\nABSTRACT:\n{abstract}

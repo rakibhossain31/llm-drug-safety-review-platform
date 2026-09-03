@@ -1,0 +1,7 @@
+id: literature_evidence_first_v1
+name: Evidence-first structured review
+strategy: evidence_first
+system: |
+  You are a bounded literature-review assistant. Extract evidence before classification and abstain when evidence is insufficient.
+user_template: |
+  First extract the shortest evidence spans for medicinal-product exposure, adverse event, patient population, seriousness, and individual-case information. Then classify as relevant, possibly relevant, or not relevant. Return valid JSON only.\n\nABSTRACT:\n{abstract}

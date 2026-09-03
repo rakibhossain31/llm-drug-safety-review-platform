@@ -1,0 +1,319 @@
+{
+  "study": "prompt strategy comparison for literature screening",
+  "split": "all",
+  "safety_note": "Offline results use deterministic prompt-strategy surrogates unless an optional provider is explicitly enabled.",
+  "results": {
+    "literature_evidence_first_v1": {
+      "name": "Evidence-first structured review",
+      "strategy": "evidence_first",
+      "metrics": {
+        "records_evaluated": 120,
+        "accuracy": 0.7417,
+        "macro_f1": 0.7026,
+        "class_metrics": {
+          "relevant": {
+            "precision": 0.5652,
+            "recall": 0.975,
+            "f1": 0.7156,
+            "support": 40
+          },
+          "possibly relevant": {
+            "precision": 0.9091,
+            "recall": 0.25,
+            "f1": 0.3922,
+            "support": 40
+          },
+          "not relevant": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          }
+        },
+        "screening_sensitivity": 1.0,
+        "screening_specificity": 1.0,
+        "false_negative_rate": 0.0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "signal_metrics": {
+          "product_exposure": {
+            "precision": 0.9149,
+            "recall": 1.0,
+            "f1": 0.9556
+          },
+          "adverse_event": {
+            "precision": 0.7955,
+            "recall": 0.8974,
+            "f1": 0.8434
+          },
+          "patient_population": {
+            "precision": 0.7658,
+            "recall": 0.9884,
+            "f1": 0.8629
+          },
+          "seriousness_signal": {
+            "precision": 0.7879,
+            "recall": 0.5532,
+            "f1": 0.65
+          },
+          "individual_case": {
+            "precision": 0.25,
+            "recall": 0.2,
+            "f1": 0.2222
+          }
+        },
+        "evidence_label_recall": 0.9964,
+        "schema_validity_rate": 1.0,
+        "average_confidence": 0.8598,
+        "average_latency_ms": 0.0334,
+        "simulated_reviewer_kappa": 0.85
+      },
+      "confidence_intervals": {
+        "macro_f1": {
+          "estimate": 0.7026,
+          "lower_95": 0.629,
+          "upper_95": 0.7807
+        },
+        "screening_sensitivity": {
+          "estimate": 1.0,
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        }
+      }
+    },
+    "literature_few_shot_v1": {
+      "name": "Few-shot classification",
+      "strategy": "few_shot",
+      "metrics": {
+        "records_evaluated": 120,
+        "accuracy": 0.7417,
+        "macro_f1": 0.7026,
+        "class_metrics": {
+          "relevant": {
+            "precision": 0.5652,
+            "recall": 0.975,
+            "f1": 0.7156,
+            "support": 40
+          },
+          "possibly relevant": {
+            "precision": 0.9091,
+            "recall": 0.25,
+            "f1": 0.3922,
+            "support": 40
+          },
+          "not relevant": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          }
+        },
+        "screening_sensitivity": 1.0,
+        "screening_specificity": 1.0,
+        "false_negative_rate": 0.0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "signal_metrics": {
+          "product_exposure": {
+            "precision": 0.9149,
+            "recall": 1.0,
+            "f1": 0.9556
+          },
+          "adverse_event": {
+            "precision": 0.7955,
+            "recall": 0.8974,
+            "f1": 0.8434
+          },
+          "patient_population": {
+            "precision": 0.7658,
+            "recall": 0.9884,
+            "f1": 0.8629
+          },
+          "seriousness_signal": {
+            "precision": 0.7879,
+            "recall": 0.5532,
+            "f1": 0.65
+          },
+          "individual_case": {
+            "precision": 0.25,
+            "recall": 0.2,
+            "f1": 0.2222
+          }
+        },
+        "evidence_label_recall": 0.9964,
+        "schema_validity_rate": 1.0,
+        "average_confidence": 0.8598,
+        "average_latency_ms": 0.0319,
+        "simulated_reviewer_kappa": 0.85
+      },
+      "confidence_intervals": {
+        "macro_f1": {
+          "estimate": 0.7026,
+          "lower_95": 0.629,
+          "upper_95": 0.7807
+        },
+        "screening_sensitivity": {
+          "estimate": 1.0,
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        }
+      }
+    },
+    "literature_self_check_v1": {
+      "name": "Evidence-first with self-check",
+      "strategy": "self_check",
+      "metrics": {
+        "records_evaluated": 120,
+        "accuracy": 0.7417,
+        "macro_f1": 0.7026,
+        "class_metrics": {
+          "relevant": {
+            "precision": 0.5652,
+            "recall": 0.975,
+            "f1": 0.7156,
+            "support": 40
+          },
+          "possibly relevant": {
+            "precision": 0.9091,
+            "recall": 0.25,
+            "f1": 0.3922,
+            "support": 40
+          },
+          "not relevant": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          }
+        },
+        "screening_sensitivity": 1.0,
+        "screening_specificity": 1.0,
+        "false_negative_rate": 0.0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "signal_metrics": {
+          "product_exposure": {
+            "precision": 0.9149,
+            "recall": 1.0,
+            "f1": 0.9556
+          },
+          "adverse_event": {
+            "precision": 0.7955,
+            "recall": 0.8974,
+            "f1": 0.8434
+          },
+          "patient_population": {
+            "precision": 0.7658,
+            "recall": 0.9884,
+            "f1": 0.8629
+          },
+          "seriousness_signal": {
+            "precision": 0.7879,
+            "recall": 0.5532,
+            "f1": 0.65
+          },
+          "individual_case": {
+            "precision": 0.25,
+            "recall": 0.2,
+            "f1": 0.2222
+          }
+        },
+        "evidence_label_recall": 0.9964,
+        "schema_validity_rate": 1.0,
+        "average_confidence": 0.8598,
+        "average_latency_ms": 0.0321,
+        "simulated_reviewer_kappa": 0.85
+      },
+      "confidence_intervals": {
+        "macro_f1": {
+          "estimate": 0.7026,
+          "lower_95": 0.629,
+          "upper_95": 0.7807
+        },
+        "screening_sensitivity": {
+          "estimate": 1.0,
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        }
+      }
+    },
+    "literature_zero_shot_v1": {
+      "name": "Zero-shot classification",
+      "strategy": "zero_shot",
+      "metrics": {
+        "records_evaluated": 120,
+        "accuracy": 0.6833,
+        "macro_f1": 0.6556,
+        "class_metrics": {
+          "relevant": {
+            "precision": 0.5128,
+            "recall": 1.0,
+            "f1": 0.678,
+            "support": 40
+          },
+          "possibly relevant": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "support": 40
+          },
+          "not relevant": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8889,
+            "support": 40
+          }
+        },
+        "screening_sensitivity": 1.0,
+        "screening_specificity": 0.8,
+        "false_negative_rate": 0.0,
+        "false_positives": 8,
+        "false_negatives": 0,
+        "signal_metrics": {
+          "product_exposure": {
+            "precision": 0.9149,
+            "recall": 1.0,
+            "f1": 0.9556
+          },
+          "adverse_event": {
+            "precision": 0.7955,
+            "recall": 0.8974,
+            "f1": 0.8434
+          },
+          "patient_population": {
+            "precision": 0.7658,
+            "recall": 0.9884,
+            "f1": 0.8629
+          },
+          "seriousness_signal": {
+            "precision": 0.7879,
+            "recall": 0.5532,
+            "f1": 0.65
+          },
+          "individual_case": {
+            "precision": 0.25,
+            "recall": 0.2,
+            "f1": 0.2222
+          }
+        },
+        "evidence_label_recall": 0.9964,
+        "schema_validity_rate": 1.0,
+        "average_confidence": 0.8658,
+        "average_latency_ms": 0.032,
+        "simulated_reviewer_kappa": 0.85
+      },
+      "confidence_intervals": {
+        "macro_f1": {
+          "estimate": 0.6556,
+          "lower_95": 0.5761,
+          "upper_95": 0.7364
+        },
+        "screening_sensitivity": {
+          "estimate": 1.0,
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        }
+      }
+    }
+  }
+}

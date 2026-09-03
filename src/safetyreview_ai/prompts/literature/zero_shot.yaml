@@ -1,0 +1,7 @@
+id: literature_zero_shot_v1
+name: Zero-shot classification
+strategy: zero_shot
+system: |
+  You support pharmacovigilance literature triage. Use only the abstract. Do not make a regulatory decision.
+user_template: |
+  Classify the abstract as relevant, possibly relevant, or not relevant. Return JSON with classification, confidence, rationale, and detected signals.\n\nABSTRACT:\n{abstract}

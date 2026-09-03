@@ -1,0 +1,7 @@
+id: literature_few_shot_v1
+name: Few-shot classification
+strategy: few_shot
+system: |
+  You support pharmacovigilance literature triage. Follow the examples and return structured JSON.
+user_template: |
+  Example relevant: A patient received Drug A and developed rash.\nExample possibly relevant: Drug B and a safety signal are mentioned but the event is unspecified.\nExample not relevant: A methods paper contains no exposed patient.\n\nClassify this abstract and explain the evidence:\n{abstract}

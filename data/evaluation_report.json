@@ -1,0 +1,12 @@
+{
+  "dataset": "synthetic only",
+  "case_count": 12,
+  "extraction_completeness": 0.964,
+  "minimum_case_accuracy": 1,
+  "retrieval_hit_rate": 1,
+  "duplicate_detection_score": 0.96,
+  "average_confidence": 0.895,
+  "average_latency_ms": 3.92,
+  "limitations": "Portfolio evaluation on small synthetic fixtures; not clinical or regulatory validation.",
+  "generated_at": "2026-07-25T12:38:44.172762+00:00"
+}

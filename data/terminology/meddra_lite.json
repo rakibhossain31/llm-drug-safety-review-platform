@@ -1,0 +1,194 @@
+[
+  {
+    "preferred_term": "Hypotension",
+    "system_organ_class": "Vascular disorders",
+    "synonyms": [
+      "low blood pressure",
+      "blood pressure decreased"
+    ]
+  },
+  {
+    "preferred_term": "Dizziness",
+    "system_organ_class": "Nervous system disorders",
+    "synonyms": [
+      "lightheadedness",
+      "vertigo"
+    ]
+  },
+  {
+    "preferred_term": "Headache",
+    "system_organ_class": "Nervous system disorders",
+    "synonyms": [
+      "head pain",
+      "cephalalgia"
+    ]
+  },
+  {
+    "preferred_term": "Fatigue",
+    "system_organ_class": "General disorders and administration site conditions",
+    "synonyms": [
+      "tiredness",
+      "asthenia"
+    ]
+  },
+  {
+    "preferred_term": "Rash",
+    "system_organ_class": "Skin and subcutaneous tissue disorders",
+    "synonyms": [
+      "skin eruption",
+      "cutaneous rash"
+    ]
+  },
+  {
+    "preferred_term": "Bradycardia",
+    "system_organ_class": "Cardiac disorders",
+    "synonyms": [
+      "slow heart rate",
+      "heart rate decreased"
+    ]
+  },
+  {
+    "preferred_term": "Anaphylactic reaction",
+    "system_organ_class": "Immune system disorders",
+    "synonyms": [
+      "anaphylaxis",
+      "anaphylactic shock"
+    ]
+  },
+  {
+    "preferred_term": "Nausea",
+    "system_organ_class": "Gastrointestinal disorders",
+    "synonyms": [
+      "feeling sick",
+      "queasiness"
+    ]
+  },
+  {
+    "preferred_term": "Diarrhoea",
+    "system_organ_class": "Gastrointestinal disorders",
+    "synonyms": [
+      "diarrhea",
+      "loose stools"
+    ]
+  },
+  {
+    "preferred_term": "Vomiting",
+    "system_organ_class": "Gastrointestinal disorders",
+    "synonyms": [
+      "emesis",
+      "being sick"
+    ]
+  },
+  {
+    "preferred_term": "Abdominal pain",
+    "system_organ_class": "Gastrointestinal disorders",
+    "synonyms": [
+      "stomach pain",
+      "abdominal discomfort"
+    ]
+  },
+  {
+    "preferred_term": "Hypoglycaemia",
+    "system_organ_class": "Metabolism and nutrition disorders",
+    "synonyms": [
+      "hypoglycemia",
+      "low blood sugar"
+    ]
+  },
+  {
+    "preferred_term": "Lactic acidosis",
+    "system_organ_class": "Metabolism and nutrition disorders",
+    "synonyms": [
+      "lactate acidosis",
+      "elevated lactate acidosis"
+    ]
+  },
+  {
+    "preferred_term": "Seizure",
+    "system_organ_class": "Nervous system disorders",
+    "synonyms": [
+      "convulsion",
+      "fit"
+    ]
+  },
+  {
+    "preferred_term": "Hospitalisation",
+    "system_organ_class": "Social circumstances",
+    "synonyms": [
+      "hospitalized",
+      "admitted to hospital"
+    ]
+  },
+  {
+    "preferred_term": "Death",
+    "system_organ_class": "General disorders and administration site conditions",
+    "synonyms": [
+      "fatal outcome",
+      "died"
+    ]
+  },
+  {
+    "preferred_term": "Disability",
+    "system_organ_class": "General disorders and administration site conditions",
+    "synonyms": [
+      "permanent impairment",
+      "incapacity"
+    ]
+  },
+  {
+    "preferred_term": "Congenital anomaly",
+    "system_organ_class": "Congenital, familial and genetic disorders",
+    "synonyms": [
+      "birth defect",
+      "malformation"
+    ]
+  },
+  {
+    "preferred_term": "Metallic taste",
+    "system_organ_class": "Nervous system disorders",
+    "synonyms": [
+      "dysgeusia",
+      "metal taste"
+    ]
+  },
+  {
+    "preferred_term": "Hepatic failure",
+    "system_organ_class": "Hepatobiliary disorders",
+    "synonyms": [
+      "liver failure",
+      "acute hepatic failure"
+    ]
+  },
+  {
+    "preferred_term": "Dyspnoea",
+    "system_organ_class": "Respiratory, thoracic and mediastinal disorders",
+    "synonyms": [
+      "shortness of breath",
+      "breathlessness"
+    ]
+  },
+  {
+    "preferred_term": "Chest pain",
+    "system_organ_class": "General disorders and administration site conditions",
+    "synonyms": [
+      "thoracic pain",
+      "pain in chest"
+    ]
+  },
+  {
+    "preferred_term": "Renal failure",
+    "system_organ_class": "Renal and urinary disorders",
+    "synonyms": [
+      "kidney failure",
+      "acute kidney injury"
+    ]
+  },
+  {
+    "preferred_term": "Pruritus",
+    "system_organ_class": "Skin and subcutaneous tissue disorders",
+    "synonyms": [
+      "itching",
+      "itchy skin"
+    ]
+  }
+]

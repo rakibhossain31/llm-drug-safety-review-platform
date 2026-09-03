@@ -1,0 +1,19 @@
+{
+  "dataset_name": "Synthetic Literature Review Benchmark v1.0",
+  "records": 120,
+  "class_distribution": {
+    "relevant": 40,
+    "possibly relevant": 40,
+    "not relevant": 40
+  },
+  "splits": {
+    "train": 72,
+    "dev": 24,
+    "test": 24
+  },
+  "double_reviewed_simulated_records": 120,
+  "disagreements_requiring_simulated_adjudication": 12,
+  "data_policy": "Synthetic only. No real patient data and no claim of FDA reviewer annotation.",
+  "intended_use": "Education, model benchmarking, and human-review workflow demonstration; not medical or regulatory decision-making.",
+  "split_method": "Stratified fixed split: 24 train, 8 development, and 8 test records per class."
+}

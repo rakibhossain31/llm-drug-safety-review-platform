@@ -1,0 +1,596 @@
+{
+  "study": "single-step versus multi-step and bounded-agentic literature review",
+  "split": "all",
+  "safety_note": "Synthetic benchmark only. Human reviewer approval required.",
+  "reports": {
+    "rule_based": {
+      "dataset": {
+        "dataset_name": "Synthetic Literature Review Benchmark v1.0",
+        "records": 120,
+        "class_distribution": {
+          "relevant": 40,
+          "possibly relevant": 40,
+          "not relevant": 40
+        },
+        "splits": {
+          "train": 72,
+          "dev": 24,
+          "test": 24
+        },
+        "double_reviewed_simulated_records": 120,
+        "disagreements_requiring_simulated_adjudication": 12,
+        "data_policy": "Synthetic only. No real patient data and no claim of FDA reviewer annotation.",
+        "intended_use": "Education, model benchmarking, and human-review workflow demonstration; not medical or regulatory decision-making.",
+        "split_method": "Stratified fixed split: 24 train, 8 development, and 8 test records per class."
+      },
+      "architecture": "rule_based",
+      "split": "all",
+      "metrics": {
+        "records_evaluated": 120,
+        "accuracy": 0.4167,
+        "macro_f1": 0.3,
+        "class_metrics": {
+          "relevant": {
+            "precision": 0.4255,
+            "recall": 1.0,
+            "f1": 0.597,
+            "support": 40
+          },
+          "possibly relevant": {
+            "precision": 0.3846,
+            "recall": 0.25,
+            "f1": 0.303,
+            "support": 40
+          },
+          "not relevant": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 40
+          }
+        },
+        "screening_sensitivity": 1.0,
+        "screening_specificity": 0.0,
+        "false_negative_rate": 0.0,
+        "false_positives": 40,
+        "false_negatives": 0,
+        "signal_metrics": {
+          "product_exposure": {
+            "precision": 0.9149,
+            "recall": 1.0,
+            "f1": 0.9556
+          },
+          "adverse_event": {
+            "precision": 0.65,
+            "recall": 1.0,
+            "f1": 0.7879
+          },
+          "patient_population": {
+            "precision": 0.7167,
+            "recall": 1.0,
+            "f1": 0.835
+          },
+          "seriousness_signal": {
+            "precision": 0.4906,
+            "recall": 0.5532,
+            "f1": 0.52
+          },
+          "individual_case": {
+            "precision": 0.2632,
+            "recall": 0.5,
+            "f1": 0.3448
+          }
+        },
+        "evidence_label_recall": 0.0,
+        "schema_validity_rate": 1.0,
+        "average_confidence": 0.808,
+        "average_latency_ms": 0.0046,
+        "simulated_reviewer_kappa": 0.85
+      },
+      "confidence_intervals": {
+        "macro_f1": {
+          "estimate": 0.3,
+          "lower_95": 0.2409,
+          "upper_95": 0.361
+        },
+        "screening_sensitivity": {
+          "estimate": 1.0,
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        }
+      },
+      "error_analysis": {
+        "error_counts": {
+          "possibly relevant -> relevant": 30,
+          "not relevant -> relevant": 24,
+          "not relevant -> possibly relevant": 16
+        },
+        "examples": {
+          "possibly relevant -> relevant": [
+            {
+              "document_id": "LIT-BENCH-041",
+              "difficulty": "ambiguous",
+              "title": "Uncertain safety relevance involving Cardiolex",
+              "rationale": "product_exposure=yes; adverse_event=yes; patient_population=yes; seriousness_signal=no; individual_case=no"
+            },
+            {
+              "document_id": "LIT-BENCH-042",
+              "difficulty": "ambiguous",
+              "title": "Uncertain safety relevance involving Glucorin",
+              "rationale": "product_exposure=yes; adverse_event=yes; patient_population=yes; seriousness_signal=no; individual_case=no"
+            },
+            {
+              "document_id": "LIT-BENCH-044",
+              "difficulty": "ambiguous",
+              "title": "Uncertain safety relevance involving Glucorin",
+              "rationale": "product_exposure=yes; adverse_event=yes; patient_population=yes; seriousness_signal=no; individual_case=no"
+            }
+          ],
+          "not relevant -> relevant": [
+            {
+              "document_id": "LIT-BENCH-081",
+              "difficulty": "hard_negative",
+              "title": "Non-case literature example 1",
+              "rationale": "product_exposure=yes; adverse_event=yes; patient_population=yes; seriousness_signal=no; individual_case=yes"
+            },
+            {
+              "document_id": "LIT-BENCH-082",
+              "difficulty": "hard_negative",
+              "title": "Non-case literature example 2",
+              "rationale": "product_exposure=yes; adverse_event=yes; patient_population=yes; seriousness_signal=no; individual_case=no"
+            },
+            {
+              "document_id": "LIT-BENCH-083",
+              "difficulty": "hard_negative",
+              "title": "Non-case literature example 3",
+              "rationale": "product_exposure=yes; adverse_event=yes; patient_population=yes; seriousness_signal=no; individual_case=no"
+            }
+          ],
+          "not relevant -> possibly relevant": [
+            {
+              "document_id": "LIT-BENCH-084",
+              "difficulty": "hard_negative",
+              "title": "Non-case literature example 4",
+              "rationale": "product_exposure=no; adverse_event=yes; patient_population=yes; seriousness_signal=yes; individual_case=no"
+            },
+            {
+              "document_id": "LIT-BENCH-085",
+              "difficulty": "hard_negative",
+              "title": "Non-case literature example 5",
+              "rationale": "product_exposure=no; adverse_event=yes; patient_population=yes; seriousness_signal=no; individual_case=no"
+            },
+            {
+              "document_id": "LIT-BENCH-089",
+              "difficulty": "hard_negative",
+              "title": "Non-case literature example 9",
+              "rationale": "product_exposure=no; adverse_event=yes; patient_population=yes; seriousness_signal=yes; individual_case=no"
+            }
+          ]
+        },
+        "difficulty_distribution": {
+          "ambiguous": 54,
+          "easy": 26,
+          "hard_negative": 40
+        }
+      },
+      "generated_at": "2026-07-25T12:40:56.448482+00:00"
+    },
+    "single_step": {
+      "dataset": {
+        "dataset_name": "Synthetic Literature Review Benchmark v1.0",
+        "records": 120,
+        "class_distribution": {
+          "relevant": 40,
+          "possibly relevant": 40,
+          "not relevant": 40
+        },
+        "splits": {
+          "train": 72,
+          "dev": 24,
+          "test": 24
+        },
+        "double_reviewed_simulated_records": 120,
+        "disagreements_requiring_simulated_adjudication": 12,
+        "data_policy": "Synthetic only. No real patient data and no claim of FDA reviewer annotation.",
+        "intended_use": "Education, model benchmarking, and human-review workflow demonstration; not medical or regulatory decision-making.",
+        "split_method": "Stratified fixed split: 24 train, 8 development, and 8 test records per class."
+      },
+      "architecture": "single_step",
+      "split": "all",
+      "metrics": {
+        "records_evaluated": 120,
+        "accuracy": 0.7417,
+        "macro_f1": 0.7026,
+        "class_metrics": {
+          "relevant": {
+            "precision": 0.5652,
+            "recall": 0.975,
+            "f1": 0.7156,
+            "support": 40
+          },
+          "possibly relevant": {
+            "precision": 0.9091,
+            "recall": 0.25,
+            "f1": 0.3922,
+            "support": 40
+          },
+          "not relevant": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          }
+        },
+        "screening_sensitivity": 1.0,
+        "screening_specificity": 1.0,
+        "false_negative_rate": 0.0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "signal_metrics": {
+          "product_exposure": {
+            "precision": 0.9149,
+            "recall": 1.0,
+            "f1": 0.9556
+          },
+          "adverse_event": {
+            "precision": 0.7955,
+            "recall": 0.8974,
+            "f1": 0.8434
+          },
+          "patient_population": {
+            "precision": 0.7658,
+            "recall": 0.9884,
+            "f1": 0.8629
+          },
+          "seriousness_signal": {
+            "precision": 0.7879,
+            "recall": 0.5532,
+            "f1": 0.65
+          },
+          "individual_case": {
+            "precision": 0.25,
+            "recall": 0.2,
+            "f1": 0.2222
+          }
+        },
+        "evidence_label_recall": 0.9964,
+        "schema_validity_rate": 1.0,
+        "average_confidence": 0.8598,
+        "average_latency_ms": 0.0323,
+        "simulated_reviewer_kappa": 0.85
+      },
+      "confidence_intervals": {
+        "macro_f1": {
+          "estimate": 0.7026,
+          "lower_95": 0.629,
+          "upper_95": 0.7807
+        },
+        "screening_sensitivity": {
+          "estimate": 1.0,
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        }
+      },
+      "error_analysis": {
+        "error_counts": {
+          "relevant -> possibly relevant": 1,
+          "possibly relevant -> relevant": 30
+        },
+        "examples": {
+          "relevant -> possibly relevant": [
+            {
+              "document_id": "LIT-BENCH-021",
+              "difficulty": "easy",
+              "title": "Congenital Anomaly after Cardiolex exposure",
+              "rationale": "Single-step evidence_first assessment: product=True, event=True, population=False, negative_or_exclusion=False."
+            }
+          ],
+          "possibly relevant -> relevant": [
+            {
+              "document_id": "LIT-BENCH-041",
+              "difficulty": "ambiguous",
+              "title": "Uncertain safety relevance involving Cardiolex",
+              "rationale": "Single-step evidence_first assessment: product=True, event=True, population=True, negative_or_exclusion=False."
+            },
+            {
+              "document_id": "LIT-BENCH-042",
+              "difficulty": "ambiguous",
+              "title": "Uncertain safety relevance involving Glucorin",
+              "rationale": "Single-step evidence_first assessment: product=True, event=True, population=True, negative_or_exclusion=False."
+            },
+            {
+              "document_id": "LIT-BENCH-044",
+              "difficulty": "ambiguous",
+              "title": "Uncertain safety relevance involving Glucorin",
+              "rationale": "Single-step evidence_first assessment: product=True, event=True, population=True, negative_or_exclusion=False."
+            }
+          ]
+        },
+        "difficulty_distribution": {
+          "ambiguous": 54,
+          "easy": 26,
+          "hard_negative": 40
+        }
+      },
+      "generated_at": "2026-07-25T12:40:57.011397+00:00"
+    },
+    "multi_step": {
+      "dataset": {
+        "dataset_name": "Synthetic Literature Review Benchmark v1.0",
+        "records": 120,
+        "class_distribution": {
+          "relevant": 40,
+          "possibly relevant": 40,
+          "not relevant": 40
+        },
+        "splits": {
+          "train": 72,
+          "dev": 24,
+          "test": 24
+        },
+        "double_reviewed_simulated_records": 120,
+        "disagreements_requiring_simulated_adjudication": 12,
+        "data_policy": "Synthetic only. No real patient data and no claim of FDA reviewer annotation.",
+        "intended_use": "Education, model benchmarking, and human-review workflow demonstration; not medical or regulatory decision-making.",
+        "split_method": "Stratified fixed split: 24 train, 8 development, and 8 test records per class."
+      },
+      "architecture": "multi_step",
+      "split": "all",
+      "metrics": {
+        "records_evaluated": 120,
+        "accuracy": 0.825,
+        "macro_f1": 0.8145,
+        "class_metrics": {
+          "relevant": {
+            "precision": 0.661,
+            "recall": 0.975,
+            "f1": 0.7879,
+            "support": 40
+          },
+          "possibly relevant": {
+            "precision": 0.9524,
+            "recall": 0.5,
+            "f1": 0.6557,
+            "support": 40
+          },
+          "not relevant": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          }
+        },
+        "screening_sensitivity": 1.0,
+        "screening_specificity": 1.0,
+        "false_negative_rate": 0.0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "signal_metrics": {
+          "product_exposure": {
+            "precision": 0.9149,
+            "recall": 1.0,
+            "f1": 0.9556
+          },
+          "adverse_event": {
+            "precision": 0.8974,
+            "recall": 0.8974,
+            "f1": 0.8974
+          },
+          "patient_population": {
+            "precision": 0.7658,
+            "recall": 0.9884,
+            "f1": 0.8629
+          },
+          "seriousness_signal": {
+            "precision": 0.7879,
+            "recall": 0.5532,
+            "f1": 0.65
+          },
+          "individual_case": {
+            "precision": 0.25,
+            "recall": 0.2,
+            "f1": 0.2222
+          }
+        },
+        "evidence_label_recall": 0.9964,
+        "schema_validity_rate": 1.0,
+        "average_confidence": 0.8883,
+        "average_latency_ms": 0.0814,
+        "simulated_reviewer_kappa": 0.85
+      },
+      "confidence_intervals": {
+        "macro_f1": {
+          "estimate": 0.8145,
+          "lower_95": 0.7449,
+          "upper_95": 0.8845
+        },
+        "screening_sensitivity": {
+          "estimate": 1.0,
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        }
+      },
+      "error_analysis": {
+        "error_counts": {
+          "relevant -> possibly relevant": 1,
+          "possibly relevant -> relevant": 20
+        },
+        "examples": {
+          "relevant -> possibly relevant": [
+            {
+              "document_id": "LIT-BENCH-021",
+              "difficulty": "easy",
+              "title": "Congenital Anomaly after Cardiolex exposure",
+              "rationale": "Multi-step evidence review classified the case_report abstract as possibly relevant; product=True, event=True, population=False, explicit_exclusion=False."
+            }
+          ],
+          "possibly relevant -> relevant": [
+            {
+              "document_id": "LIT-BENCH-041",
+              "difficulty": "ambiguous",
+              "title": "Uncertain safety relevance involving Cardiolex",
+              "rationale": "Multi-step evidence review classified the review abstract as relevant; product=True, event=True, population=True, explicit_exclusion=False."
+            },
+            {
+              "document_id": "LIT-BENCH-042",
+              "difficulty": "ambiguous",
+              "title": "Uncertain safety relevance involving Glucorin",
+              "rationale": "Multi-step evidence review classified the unclear abstract as relevant; product=True, event=True, population=True, explicit_exclusion=False."
+            },
+            {
+              "document_id": "LIT-BENCH-045",
+              "difficulty": "ambiguous",
+              "title": "Uncertain safety relevance involving Cardiolex",
+              "rationale": "Multi-step evidence review classified the review abstract as relevant; product=True, event=True, population=True, explicit_exclusion=False."
+            }
+          ]
+        },
+        "difficulty_distribution": {
+          "ambiguous": 54,
+          "easy": 26,
+          "hard_negative": 40
+        }
+      },
+      "generated_at": "2026-07-25T12:40:57.454196+00:00"
+    },
+    "agentic": {
+      "dataset": {
+        "dataset_name": "Synthetic Literature Review Benchmark v1.0",
+        "records": 120,
+        "class_distribution": {
+          "relevant": 40,
+          "possibly relevant": 40,
+          "not relevant": 40
+        },
+        "splits": {
+          "train": 72,
+          "dev": 24,
+          "test": 24
+        },
+        "double_reviewed_simulated_records": 120,
+        "disagreements_requiring_simulated_adjudication": 12,
+        "data_policy": "Synthetic only. No real patient data and no claim of FDA reviewer annotation.",
+        "intended_use": "Education, model benchmarking, and human-review workflow demonstration; not medical or regulatory decision-making.",
+        "split_method": "Stratified fixed split: 24 train, 8 development, and 8 test records per class."
+      },
+      "architecture": "agentic",
+      "split": "all",
+      "metrics": {
+        "records_evaluated": 120,
+        "accuracy": 0.7417,
+        "macro_f1": 0.7026,
+        "class_metrics": {
+          "relevant": {
+            "precision": 0.5652,
+            "recall": 0.975,
+            "f1": 0.7156,
+            "support": 40
+          },
+          "possibly relevant": {
+            "precision": 0.9091,
+            "recall": 0.25,
+            "f1": 0.3922,
+            "support": 40
+          },
+          "not relevant": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 40
+          }
+        },
+        "screening_sensitivity": 1.0,
+        "screening_specificity": 1.0,
+        "false_negative_rate": 0.0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "signal_metrics": {
+          "product_exposure": {
+            "precision": 0.9149,
+            "recall": 1.0,
+            "f1": 0.9556
+          },
+          "adverse_event": {
+            "precision": 0.8125,
+            "recall": 1.0,
+            "f1": 0.8966
+          },
+          "patient_population": {
+            "precision": 0.7658,
+            "recall": 0.9884,
+            "f1": 0.8629
+          },
+          "seriousness_signal": {
+            "precision": 0.7429,
+            "recall": 0.5532,
+            "f1": 0.6341
+          },
+          "individual_case": {
+            "precision": 0.25,
+            "recall": 0.2,
+            "f1": 0.2222
+          }
+        },
+        "evidence_label_recall": 0.9964,
+        "schema_validity_rate": 1.0,
+        "average_confidence": 0.9302,
+        "average_latency_ms": 0.0285,
+        "simulated_reviewer_kappa": 0.85
+      },
+      "confidence_intervals": {
+        "macro_f1": {
+          "estimate": 0.7026,
+          "lower_95": 0.629,
+          "upper_95": 0.7807
+        },
+        "screening_sensitivity": {
+          "estimate": 1.0,
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        }
+      },
+      "error_analysis": {
+        "error_counts": {
+          "relevant -> possibly relevant": 1,
+          "possibly relevant -> relevant": 30
+        },
+        "examples": {
+          "relevant -> possibly relevant": [
+            {
+              "document_id": "LIT-BENCH-021",
+              "difficulty": "easy",
+              "title": "Congenital Anomaly after Cardiolex exposure",
+              "rationale": "Bounded agent used 6 approved tool steps. Final evidence: product=True, event=True, population=False, design=case_report, exclusions=False. Human reviewer approval required."
+            }
+          ],
+          "possibly relevant -> relevant": [
+            {
+              "document_id": "LIT-BENCH-041",
+              "difficulty": "ambiguous",
+              "title": "Uncertain safety relevance involving Cardiolex",
+              "rationale": "Bounded agent used 5 approved tool steps. Final evidence: product=True, event=True, population=True, design=review, exclusions=False. Human reviewer approval required."
+            },
+            {
+              "document_id": "LIT-BENCH-042",
+              "difficulty": "ambiguous",
+              "title": "Uncertain safety relevance involving Glucorin",
+              "rationale": "Bounded agent used 5 approved tool steps. Final evidence: product=True, event=True, population=True, design=unclear, exclusions=False. Human reviewer approval required."
+            },
+            {
+              "document_id": "LIT-BENCH-044",
+              "difficulty": "ambiguous",
+              "title": "Uncertain safety relevance involving Glucorin",
+              "rationale": "Bounded agent used 5 approved tool steps. Final evidence: product=True, event=True, population=True, design=unclear, exclusions=False. Human reviewer approval required."
+            }
+          ]
+        },
+        "difficulty_distribution": {
+          "ambiguous": 54,
+          "easy": 26,
+          "hard_negative": 40
+        }
+      },
+      "generated_at": "2026-07-25T12:40:57.881503+00:00"
+    }
+  }
+}

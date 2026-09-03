@@ -1,0 +1,17 @@
+{
+  "study": "equivalent-format perturbation consistency",
+  "split": "test",
+  "perturbation": "extra whitespace and a semantically neutral synthetic-study phrase expansion",
+  "results": {
+    "single_step": {
+      "format_perturbation_consistency": 0.7083
+    },
+    "multi_step": {
+      "format_perturbation_consistency": 1.0
+    },
+    "agentic": {
+      "format_perturbation_consistency": 1.0
+    }
+  },
+  "limitations": "This is a narrow deterministic robustness check, not real-world linguistic robustness validation."
+}
